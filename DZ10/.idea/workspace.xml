@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ae13fb51-ea17-4587-a105-5a0686e4329a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DZ10.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/quotes/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/quotes/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/quotes/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/quotes/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/quotes/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/quotes/static/quotes/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/quotes/templates/quotes/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/quotes/templates/quotes/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/quotes/templatetags/extract.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/quotes/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/quotes/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/quotes/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/quotes/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/root/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/root/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/root/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/root/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/root/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/users/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/users/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/users/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/users/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/users/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/users/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/users/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/users/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/add_quotes_to_mongo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/authors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/quotes.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="ProjectId" id="2dPXxPW3o2HtfGCU77R6j3NbglG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae13fb51-ea17-4587-a105-5a0686e4329a" name="Changes" comment="" />
+      <created>1709910932794</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709910932794</updated>
+    </task>
+    <servers />
+  </component>
+</project>
