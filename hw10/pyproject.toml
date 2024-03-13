@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "dz10"
+name = "hw10"
 version = "0.1.0"
 description = ""
 authors = ["bobantonbob <130400459+bobantonbob@users.noreply.github.com>"]
@@ -8,9 +8,8 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 django = "^5.0.3"
-pymongo = "3.11.0"
 
 
 [build-system]
 requires = ["poetry-core"]
-build-backend = "poetry.cor
+build-backend = "poetry.core.masonry.api"

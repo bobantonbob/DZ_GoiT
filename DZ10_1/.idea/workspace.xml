@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ed6cf5e0-1ddf-4ec9-adf9-81cc7690cf43" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../DZ10/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/.idea/DZ10.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/poetry.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/pyproject.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/quotes/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/quotes/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/quotes/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/quotes/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/quotes/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/quotes/static/quotes/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/quotes/templates/quotes/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/quotes/templates/quotes/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/quotes/templatetags/extract.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/quotes/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/quotes/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/quotes/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/quotes/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/root/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/root/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/root/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/root/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/root/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/users/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/users/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/users/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/users/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/users/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/users/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/users/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/root/users/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/utils/add_quotes_to_mongo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/utils/authors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DZ10/utils/quotes.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="ProjectId" id="2dPDDGNj5WjUtjEsgEFvCo1jbjN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/anton/PycharmProjects/GoiT/Web/DZ_GoiT/DZ10_1"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed6cf5e0-1ddf-4ec9-adf9-81cc7690cf43" name="Changes" comment="" />
+      <created>1709900699105</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709900699105</updated>
+    </task>
+    <servers />
+  </component>
+</project>
