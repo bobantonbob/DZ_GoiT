@@ -5,6 +5,6 @@ from . import views
 app_name = 'quotes'
 
 urlpatterns = [
-    path('', views.main, name='root'),  # quotes:root
-    path('<int:page>', views.main, name='root_paginate'),
+    path('', views.main, name='home'),  # quotes:home
+    path('<int:page>', views.main, name='home_paginate'),
 ]
