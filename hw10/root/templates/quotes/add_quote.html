@@ -1,7 +1,6 @@
 {% extends '_layouts/base.html' %}
 
 {% block content %}
-
 <div class="container">
     {% if form.errors and form.non_field_errors %}
     <div class="alert alert-danger" role="alert">
@@ -16,21 +15,23 @@
             <span>{{form.errors.quote}}</span>
         </div>
         <div class="mb-3">
-            <label for="tags" class="form-label">teg</label>
-            {{ form.tags}}
-            <span>{{form.errors.tags}}</span>
+            <label for="tags" class="form-label">Tags</label>
+            <select name="tags" class="form-control" id="tags" multiple>
+                {% for tag in form.tags.field.queryset %}
+                <option value="{{ tag.pk }}">{{ tag.name }}</option>
+                {% endfor %}
+            </select>
+            <span>{{ form.errors.tags }}</span>
         </div>
 
         <div class="mb-3">
-            <label for="author" class="form-label">the name of the author</label>
-            {{ form.author}}
+            <label for="author" class="form-label">Author</label>
+            {{ form.author }}
             <span>{{form.errors.author}}</span>
         </div>
-
 
         <button type="submit" class="btn btn-primary">Submit</button>
         <button type="reset" class="btn btn-primary">Reset</button>
     </form>
 </div>
-
-{% endblock content %}
+{% endblock %}
