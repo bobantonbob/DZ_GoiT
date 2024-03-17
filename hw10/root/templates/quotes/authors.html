@@ -1,0 +1,40 @@
+{% extends '_layouts/base.html' %}
+
+
+{% block content %}
+<div class="row">
+    {% for author in authors %}
+    <div class="col-md-4"> <!-- Замініть 3 на потрібний вам розмір колонки Bootstrap -->
+        <div class="quote" itemscope="" itemtype="http://schema.org/CreativeWork">
+            <small class="author" itemprop="author">{{ author.id }} - {{ author.fullname }}</small>
+            <a href="/author/{{ author.id }}" previewlistener="true">(about)</a>
+        </div>
+    </div>
+    {% endfor %}
+<nav>
+    <ul class="pagination">
+        {% if authors.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="{% url 'quotes:authors_paginated' 1 %}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        {% endif %}
+        {% for num in authors.paginator.page_range %}
+        <li class="page-item {% if num == authors.number %}active{% endif %}">
+            <a class="page-link" href="{% url 'quotes:authors_paginated' num %}">{{ num }}</a>
+        </li>
+        {% endfor %}
+        {% if authors.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="{% url 'quotes:authors_paginated' authors.paginator.num_pages %}" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+
+
+</div>
+{% endblock %}

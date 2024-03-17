@@ -1,0 +1,36 @@
+{% extends '_layouts/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    {% if form.errors and form.non_field_errors %}
+    <div class="alert alert-danger" role="alert">
+        {{form.non_field_errors}}
+    </div>
+    {% endif %}
+    <form action="{% url 'quotes:add_quote' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="quote" class="form-label">New quote</label>
+            {{ form.quote }}
+            <span>{{form.errors.quote}}</span>
+        </div>
+        <div class="mb-3">
+            <label for="tags" class="form-label">teg</label>
+            {{ form.tags}}
+            <span>{{form.errors.tags}}</span>
+        </div>
+
+        <div class="mb-3">
+            <label for="author" class="form-label">the name of the author</label>
+            {{ form.author}}
+            <span>{{form.errors.author}}</span>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-primary">Reset</button>
+    </form>
+</div>
+
+{% endblock content %}

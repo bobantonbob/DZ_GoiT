@@ -4,11 +4,14 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-                  path('', include('quotes.urls')),
-                  path('auth/', include('app_auth.urls')),
-                  path('admin/', admin.site.urls),
+    path('', include('quotes.urls')),
+    path('auth/', include('app_auth.urls')),
+    path('admin/', admin.site.urls),
 
+    # path('users', include('users.urls')),
 
-                  # path('users', include('users.urls')),
+]  # перевірити !!!!
 
-              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # перевірити !!!!
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
