@@ -10,10 +10,10 @@ class ContactSchema(BaseModel):
     phone_number: str = Field(min_length=7, max_length=20)
     birthday: str = Field(max_length=20)
     extra_info: str = Field(min_length=3, max_length=250)
-
+    completed: Optional[bool] = False
 
 class ContactUpdateSchema(ContactSchema):
-    pass
+    completed: bool
 
 
 class ContactResponse(BaseModel):
@@ -24,6 +24,7 @@ class ContactResponse(BaseModel):
     phone_number: str
     birthday: str
     extra_info: str
+    completed: bool
 
     class Config:
         from_attributes = True

@@ -17,3 +17,4 @@ class Contact(Base):
     phone_number: Mapped[str] = mapped_column(String(20), index=True)
     birthday: Mapped[str] = mapped_column(String(20), index=True)
     extra_info: Mapped[str] = mapped_column(String(250))
+    completed: Mapped[bool] = mapped_column(default=False)

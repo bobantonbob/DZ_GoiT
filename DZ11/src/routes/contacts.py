@@ -17,7 +17,7 @@ async def get_contacts(limit: int = Query(10, ge=10, le=500), offset: int = Quer
 
 @router.get("/{contact_id}", response_model=ContactResponse)
 async def get_contact(contact_id: int = Path(ge=1), db: AsyncSession = Depends(get_db)):
-    contact = await repositories_contact.get_contact(contact_id, db)
+    contact = await repositories_contact.get_contacts(contact_id, db)
     if contact is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="NOT FOUND")
     return contact
