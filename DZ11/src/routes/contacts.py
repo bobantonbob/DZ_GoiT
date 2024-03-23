@@ -3,7 +3,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from src.database.db import get_db
 from src.repository import contacts as repositories_contacts
-from src.schemas.contact import ContactSchema, ContactUpdateSchema, ContactResponse
+from src.schemas.contact import ContactSchema, ContactUpdateSchema, ContactResponse, ContactSearchSchema
+import traceback
+
 
 router = APIRouter(prefix='/contacts', tags=['contacts'])
 
@@ -15,18 +17,26 @@ async def get_contacts(limit: int = Query(10, ge=10, le=500), offset: int = Quer
     return contacts
 
 
-@router.get("/{contact_id}", response_model=ContactResponse)
-async def get_contact(contact_id: int = Path(ge=1), db: AsyncSession = Depends(get_db)):
-    contact = await repositories_contacts.get_contact(contact_id, db)
-    if contact is None:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="NOT FOUND")
-    return contact
-
-
 @router.post("/", response_model=ContactResponse, status_code=status.HTTP_201_CREATED)
 async def create_contact(body: ContactSchema, db: AsyncSession = Depends(get_db)):
     contact = await repositories_contacts.create_contact(body, db)
+    if contact is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Failed to create contact")
     return contact
+
+
+
+
+
+@router.get("/{contact_id}", response_model=ContactResponse)
+async def get_contact(contact_id: int = Path(..., ge=1), db: AsyncSession = Depends(get_db)):
+    try:
+        contact = await repositories_contacts.get_contact(contact_id, db)
+        if not contact:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Contact not found")
+        return contact
+    except Exception as e:
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
 
 
 @router.put("/{contact_id}")
@@ -41,3 +51,5 @@ async def update_contact(body: ContactUpdateSchema, contact_id: int = Path(ge=1)
 async def delete_contact(contact_id: int = Path(ge=1), db: AsyncSession = Depends(get_db)):
     contact = await repositories_contacts.delete_contact(contact_id, db)
     return contact
+
+

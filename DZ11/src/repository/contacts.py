@@ -49,3 +49,6 @@ async def delete_contact(contact_id: int, db: AsyncSession):
         await db.delete(contact)
         await db.commit()
     return contact
+
+
+

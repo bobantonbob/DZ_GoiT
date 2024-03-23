@@ -37,3 +37,7 @@ class ContactResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class ContactSearchSchema(BaseModel):
+    first_name: str

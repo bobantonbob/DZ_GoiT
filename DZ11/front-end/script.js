@@ -1,6 +1,6 @@
 // script.js
 
-const url = 'http://localhost:8000/api/todos/'
+const url = 'http://localhost:8000/api/contacts/'
 
 window.getTasks = async function (skip = 0, limit = 100) {
   const response = await fetch(`${url}?skip=${skip}&limit=${limit}`)
