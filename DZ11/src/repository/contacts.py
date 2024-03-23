@@ -11,14 +11,14 @@ async def get_contacts(limit: int, offset: int, db: AsyncSession):
     return contacts.scalars().all()
 
 
-async def get_contacto(contact_id: int, db: AsyncSession):
+async def get_contact(contact_id: int, db: AsyncSession):
     stmt = select(Contact).filter_by(id=contact_id)
     contact = await db.execute(stmt)
     return contact.scalar_one_or_none()
 
 
 async def create_contact(body: ContactSchema, db: AsyncSession):
-    contact = Contact(**body.model_dump(exclude_unset=True))  # (title=body.title, description=body.description)
+    contact = Contact(**body.model_dump(exclude_unset=True))
     db.add(contact)
     await db.commit()
     await db.refresh(contact)
@@ -30,9 +30,12 @@ async def update_contact(contact_id: int, body: ContactUpdateSchema, db: AsyncSe
     result = await db.execute(stmt)
     contact = result.scalar_one_or_none()
     if contact:
-        contact.title = body.title
-        contact.description = body.description
-        contact.completed = body.completed
+        contact.first_name = body.first_name
+        contact.last_name = body.last_name
+        contact.email = body.email
+        contact.phone_number = body.phone_number
+        contact.birthday = body.birthday
+        contact.extra_info = body.extra_info
         await db.commit()
         await db.refresh(contact)
     return contact
