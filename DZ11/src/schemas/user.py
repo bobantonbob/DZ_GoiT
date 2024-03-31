@@ -2,6 +2,9 @@ from typing import Optional
 
 from pydantic import BaseModel, EmailStr, Field
 
+from src.entity.models import Role
+
+
 # from src.entity.models import Role
 
 
@@ -16,7 +19,7 @@ class UserResponse(BaseModel):
     username: str
     email: EmailStr
     avatar: str
-    # role: Role
+    role: Role
 
     class Config:
         from_attributes = True
