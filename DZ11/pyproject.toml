@@ -21,6 +21,7 @@ python-multipart = "^0.0.9"
 passlib = "^1.7.4"
 bcrypt="3.2.2"
 libgravatar = "^1.0.4"
+fastapi-mail = "^1.4.1"
 
 
 [build-system]
