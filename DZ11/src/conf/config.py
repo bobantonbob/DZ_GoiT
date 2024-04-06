@@ -19,8 +19,8 @@ class Settings(BaseSettings):
     REDIS_PORT: int = 6379
     REDIS_PASSWORD: str | None = None
     CLD_NAME: str = 'DZ11_RESTAPI'
-    CLD_API_KEY: int = 326488457974591
-    CLD_API_SECRET: str = "secret"
+    CLD_API_KEY: int = 117218485545755
+    CLD_API_SECRET: str = 'secret'
 
     @field_validator("ALGORITHM")
     @classmethod
