@@ -1,0 +1,48 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres:16.1
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: mydb
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - type: bind
+        source: ./bd_data
+        target: /var/lib/postgresql/data
+
+  django.app:
+      build:
+        context: .
+        dockerfile: prod.Dockerfile
+
+  proxy:
+    image: nginx:1.25.3-alpine
+    container_name: nginx_proxy
+    environment:
+      NGINX_ENVSUBST_OUTPUT_DIR: /etc/nginx
+    ports:
+      - 443:443
+    volumes:
+      - type: bind
+        source: nginx/nginx.conf
+        target: /etc/nginx/nginx.conf 
+
+      - source: nginx/notes.service
+        target: /etc/nginx/notes.service
+        type: bind
+
+      - type: bind
+        target: /tls/notes/server.crt
+        source: easy-rsa/easyrsa3/pki/issued/web.goit.ed.com.crt
+
+      - type: bind
+        target: /tls/notes/server.key
+        source: easy-rsa/easyrsa3/pki/private/web.goit.ed.com.key
+
+      - type: bind
+        target: /notes
+        source: ./notes

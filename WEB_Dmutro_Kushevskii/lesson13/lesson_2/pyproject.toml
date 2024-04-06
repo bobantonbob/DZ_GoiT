@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "lesson-2"
+version = "0.1.0"
+description = ""
+package-mode = false
+authors = ["Dima Kushchevskyi <d.kushchevskyi@sirinsoftware.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-dotenv = "^1.0.1"
+python-decouple = "^3.8"
+fastapi-limiter = "^0.1.6"
+redis = "^5.0.3"
+uvicorn = "^0.29.0"
+slowapi = "^0.1.9"
+cloudinary = "^1.39.1"
+python-multipart = "^0.0.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

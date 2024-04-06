@@ -1,0 +1,20 @@
+server {
+    keepalive_timeout   70;
+
+    listen 443 ssl;
+
+    server_name web.goit.ed.com;
+
+    ignore_invalid_headers off;
+
+    ssl_certificate        /tls/notes/server.crt;
+    ssl_certificate_key    /tls/notes/server.key;
+
+    location /static/ {
+	root /notes;
+    }
+
+    location / {
+        proxy_pass http://django.app:8000;
+    }
+}
