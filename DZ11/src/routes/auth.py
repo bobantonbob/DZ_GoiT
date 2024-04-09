@@ -15,6 +15,23 @@ get_refresh_token = HTTPBearer()
 
 @router.post("/signup", response_model=UserResponse, status_code=status.HTTP_201_CREATED)
 async def signup(body: UserSchema, bt: BackgroundTasks, request: Request, db: AsyncSession = Depends(get_db)):
+    """
+    The signup function creates a new user in the database.
+        It takes a UserSchema object as input, and returns the newly created user.
+        If an account with that email already exists, it raises an HTTPException.
+
+    Args:
+        body: UserSchema: Validate the request body
+        bt: BackgroundTasks: Add a task to the background tasks queue
+        request: Request: Get the base url of the request
+        db: AsyncSession: Create a database session
+
+    Returns:
+        A new user
+
+    Doc Author:
+        Trelent
+    """
     exist_user = await repositories_users.get_user_by_email(body.email, db)
     if exist_user:
         raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="Account already exists")
