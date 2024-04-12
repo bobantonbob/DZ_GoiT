@@ -1,0 +1,13 @@
+[Unit]
+Description= instance to serve my_server
+After=network.target
+
+[Service]
+User=fastapi_user
+Group=www-data
+WorkingDirectory=/home/fastapi_user/fastapi_app_folder
+Environment="PATH=/home/fastapi_user/fastapi_app_folder/myprojectenv/bin"
+ExecStart=/home/fastapi_user/fastapi_app_folder/myprojectenv/bin/python asgi.py
+
+[Install]
+WantedBy=multi-user.target
